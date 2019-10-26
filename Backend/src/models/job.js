@@ -3,11 +3,11 @@ const date = require('date-time')
 
 const jobsSchema = mongoose.Schema({
     latitude: {
-        type: Number,
+        type: String,
         required: true
     },
     longitude: {
-        type: Number,
+        type: String,
         required: true
     },
     description: {
@@ -22,12 +22,12 @@ const jobsSchema = mongoose.Schema({
         type: String,
         default: '0'
     },
-    begin_date: {
+    beginDate: {
         type: Date,
         required: true,
         default: date()
     },
-    end_date: {
+    endDate: {
         type: Date,
         required: true,
         default: date()

@@ -2,7 +2,7 @@ const express = require('express')
 const Job = require('../models/job')
 const router = new express.Router()
 
-router.post('/jobs', async (req, res) => {
+router.post('/newJob', async (req, res) => {
      const job = new Job(req.body)
 
     try {
@@ -14,4 +14,3 @@ router.post('/jobs', async (req, res) => {
 })
 
 module.exports = router
-
