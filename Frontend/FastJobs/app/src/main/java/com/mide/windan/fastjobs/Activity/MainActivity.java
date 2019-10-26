@@ -1,6 +1,6 @@
-package com.mide.windan.fastjobs;
+package com.mide.windan.fastjobs.Activity;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,9 +8,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.mide.windan.fastjobs.Models.Job;
+import com.mide.windan.fastjobs.R;
 import com.mide.windan.fastjobs.Rest.RestAPI;
-
-import java.io.IOException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -18,6 +17,9 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
+
+//47239585728-5htkm6q8hfhscebfrpiddvq7244g0j6t.apps.googleusercontent.com
+//client id
 
 public class MainActivity extends AppCompatActivity {
 
