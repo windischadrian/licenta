@@ -27,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
     }
+    //test
 
     @OnClick(R.id.loginButton)
     public void doLogin(View v){
