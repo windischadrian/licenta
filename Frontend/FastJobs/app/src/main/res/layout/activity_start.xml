@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Activities.StartActivity"
+    android:layout_marginBottom="50dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/logo_transparent"/>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/OutlineButtonStyle"
+        android:id="@+id/loginButton"
+        android:onClick="toLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="SIGN IN"/>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/OutlineButtonIconStyle"
+        android:id="@+id/googleLoginButton"
+        android:onClick="doGoogleLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:icon="@drawable/ic_google"
+        app:iconSize="30dp"
+        android:text="GOOGLE SIGN IN"
+        app:iconPadding="5dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/registerTextButton"
+        android:onClick="toRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="80dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="No account? Sign up instead"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:shadowColor="#000000" />
+</LinearLayout>

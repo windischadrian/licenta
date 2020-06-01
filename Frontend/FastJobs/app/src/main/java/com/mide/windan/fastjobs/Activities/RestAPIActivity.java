@@ -1,6 +1,5 @@
-package com.mide.windan.fastjobs.Activity;
+package com.mide.windan.fastjobs.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +10,7 @@ import com.mide.windan.fastjobs.Models.Job;
 import com.mide.windan.fastjobs.R;
 import com.mide.windan.fastjobs.Rest.RestAPI;
 
+import androidx.appcompat.app.AppCompatActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -18,10 +18,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
-//47239585728-5htkm6q8hfhscebfrpiddvq7244g0j6t.apps.googleusercontent.com
-//client id
-
-public class MainActivity extends AppCompatActivity {
+public class RestAPIActivity extends AppCompatActivity {
 
     Button sendButton,getButton;
     EditText descriptionEditText, costEditText, typeEditText, beginDateEditText, endDateEditText;
@@ -72,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 String response = callbackResponse.body();
                 System.out.println("@@@@@@@@@@@@@@ PUT RESPONSE: ");
                 System.out.println(response);
-                Toast.makeText(MainActivity.this, response, Toast.LENGTH_SHORT).show();
+                Toast.makeText(RestAPIActivity.this, response, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -89,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 String response = callbackResponse.body();
                 System.out.println("@@@@@@@@@@@@@@ GET RESPONSE: ");
                 System.out.println(response);
-                Toast.makeText(MainActivity.this, response, Toast.LENGTH_SHORT).show();
+                Toast.makeText(RestAPIActivity.this, response, Toast.LENGTH_SHORT).show();
             }
 
             @Override
