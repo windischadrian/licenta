@@ -1,11 +1,10 @@
 package com.mide.windan.fastjobs.Enums;
 
-import com.mide.windan.fastjobs.Models.JobType;
 import com.mide.windan.fastjobs.R;
 
 import java.util.HashMap;
 
-import static com.mide.windan.fastjobs.Models.JobType.*;
+import static com.mide.windan.fastjobs.Enums.JobType.*;
 
 public class JobIcon {
 

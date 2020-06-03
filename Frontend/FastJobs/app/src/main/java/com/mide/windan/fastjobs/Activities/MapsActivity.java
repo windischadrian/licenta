@@ -7,16 +7,17 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.mide.windan.fastjobs.Models.Markers;
 import com.mide.windan.fastjobs.R;
 
 import androidx.fragment.app.FragmentActivity;
 
-import static com.mide.windan.fastjobs.Models.JobType.*;
+import static com.mide.windan.fastjobs.Enums.JobType.*;
 
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
     private Markers markers = new Markers();
@@ -39,24 +40,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng politehnica = new LatLng(44.4244133, 26.0682237);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(politehnica, 16));
         markers.getMarkers().forEach((marker, jobType) -> mMap.addMarker(marker));
+        mMap.setOnMarkerClickListener(this);
     }
 
     private void addMarkers() {
         MarkerOptions mo1 = new MarkerOptions();
-        mo1.position(new LatLng(-34, 151));
+        mo1.position(new LatLng(44.425952, 26.068764));
         markers.addMarker(mo1, ANIMALE);
         MarkerOptions mo2 = new MarkerOptions();
-        mo2.position(new LatLng(-33, 151));
+        mo2.position(new LatLng(44.421993, 26.073632));
         markers.addMarker(mo2, ELECTRICIAN);
         MarkerOptions mo3 = new MarkerOptions();
-        mo3.position(new LatLng(-32, 151));
+        mo3.position(new LatLng(44.423301, 26.062346));
         markers.addMarker(mo3, MASINA);
         MarkerOptions mo4 = new MarkerOptions();
-        mo4.position(new LatLng(-31, 151));
+        mo4.position(new LatLng(44.418104, 26.068438));
         markers.addMarker(mo4, TEHNIC);
+    }
 
+    @Override
+    public boolean onMarkerClick(final Marker marker){
+
+        return false;
     }
 }

@@ -26,4 +26,7 @@
         <item name="iconTint"></item>
     </style>
 
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+    </style>
+
 </resources>

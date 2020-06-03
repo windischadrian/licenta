@@ -3,6 +3,7 @@ package com.mide.windan.fastjobs.Models;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.mide.windan.fastjobs.Enums.JobIcon;
+import com.mide.windan.fastjobs.Enums.JobType;
 
 
 import java.util.HashMap;
