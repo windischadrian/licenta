@@ -6,6 +6,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,10 +47,15 @@ public class RegisterActivity extends AppCompatActivity {
     public void doRegister(View v){
         //Passwords match
         if(passwordEditText.getText().equals(password2EditText.getText())){
+            if(Patterns.EMAIL_ADDRESS.matcher(emailEditText.getText().toString()).matches()){
 
+            }
+            else {
+
+            }
         }
         //Password and password verification do not match.
-        else{
+        else {
             String message = "Passwords do not match";
             Toast.makeText(this,message, Toast.LENGTH_LONG).show();
         }
