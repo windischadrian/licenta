@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,6 +49,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
+
+    @BindView(R.id.job_info_view)
+    LinearLayout job_info_view;
 
 
     @Override
@@ -95,11 +99,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         Toast.makeText(this, jobMarker.getJob().getDescription(), Toast.LENGTH_LONG).show();
 
+        job_info_view.setVisibility(View.VISIBLE);
+
         return false;
     }
 
     @OnClick(R.id.hamburgerButton)
     public void openNavigationDrawer(View v){
         drawerLayout.openDrawer(Gravity.LEFT);
+    }
+
+    public void doHideJobInfo(View view) {
+        job_info_view.setVisibility(View.GONE);
     }
 }
