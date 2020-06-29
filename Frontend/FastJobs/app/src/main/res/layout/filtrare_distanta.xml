@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_gravity="left|center"
+    android:gravity="left">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distanta maxima: "/>
+    <EditText
+        android:id="@+id/filtrareDistantaEditText"
+        android:layout_width="60dp"
+        android:inputType="number"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:onClick="doFilterJobByDistance"
+        android:backgroundTint="@color/colorPrimary"/>
+
+</LinearLayout>

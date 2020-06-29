@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="job_type_array">
+        <item>Nimic selectat</item>
+        <item>Loc de munca</item>
+        <item>Tehnic</item>
+        <item>Animale</item>
+        <item>Electric</item>
+        <item>Auto</item>
+    </string-array>
+</resources>

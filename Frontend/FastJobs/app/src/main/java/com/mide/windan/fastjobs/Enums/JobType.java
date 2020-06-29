@@ -4,5 +4,6 @@ public enum JobType {
     ANIMALE,
     ELECTRICIAN,
     MASINA,
-    TEHNIC;
+    TEHNIC,
+    LOC_DE_MUNCA;
 }

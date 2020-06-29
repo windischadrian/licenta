@@ -2,25 +2,58 @@ package com.mide.windan.fastjobs.Models;
 
 public class Job {
 
+    private String jobOwner = "Default Job Owner";
+    private String _id;
     private String longitude = "111.111";
     private String latitude = "222.222";
+    private String jobTitle = "job title";
     private String description = "default description";
     private Long cost = 123L;
     private String type = "default type";
     private String beginDate = "2019-10-19";
     private String endDate = "2019-10-19";
+    private Boolean fullJob = true;
 
     public Job() {
     }
 
-    public Job(String longitude, String latitude, String description, Long cost, String type, String beginDate, String endDate) {
+    public Job(String jobOwner, String longitude, String latitude, String jobTitle, String description, Long cost, String type, String beginDate, String endDate, Boolean fullJob) {
+        if(!jobOwner.equals("")) this.jobOwner = jobOwner;
         if(!latitude.equals("")) this.latitude = latitude;
         if(!longitude.equals("")) this.longitude = longitude;
+        if(!jobTitle.equals("")) this.jobTitle = jobTitle;
         if(!description.equals("")) this.description = description;
         if(!cost.toString().equals("")) this.cost = cost;
         if(!type.equals("")) this.type = type;
         if(!beginDate.equals("")) this.beginDate = beginDate;
         if(!endDate.equals("")) this.endDate = endDate;
+        this.fullJob = fullJob;
+    }
+
+    public String getJobId(){return _id;}
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
+    }
+
+    public String getJobOwner() {
+        return jobOwner;
+    }
+
+    public void setJobOwner(String jobOwner) {
+        this.jobOwner = jobOwner;
+    }
+
+    public Boolean getFullJob() {
+        return fullJob;
+    }
+
+    public void setFullJob(Boolean fullJob) {
+        this.fullJob = fullJob;
     }
 
     public String getLongitude() {
@@ -81,12 +114,14 @@ public class Job {
 
     @Override
     public String toString(){
-        return "latitude:" + latitude
+        return "\nlatitude:" + latitude
                 + "\nlongitude: " + longitude
                 + "\ndescription: " + description
                 + "\ncost: " + cost
                 + "\ntype: " + type
                 + "\nbeginDate: " + beginDate
-                + "\nendDate: " + endDate;
+                + "\nendDate: " + endDate
+                + "\nfullJob: " + fullJob
+                + "\njobOwner: " + jobOwner;
     }
 }

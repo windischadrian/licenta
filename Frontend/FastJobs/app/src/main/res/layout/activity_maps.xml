@@ -26,7 +26,7 @@
             android:layout_height="50dp"
             android:background="#7A003366">
 
-            <Button
+            <ImageButton
                 android:id="@+id/hamburgerButton"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -52,85 +52,176 @@
         <LinearLayout
             android:id="@+id/job_info_view"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:orientation="vertical"
-            android:background="#D5D5D5"
-            android:padding="5dp">
+            android:background="@drawable/layout_bg"
+            android:padding="5dp"
+            android:layout_margin="30dp"
+            android:visibility="gone">
 
             <TextView
-                android:onClick="doHideJobInfo"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:layout_gravity="right"
-                android:text="X"
-                android:backgroundTint="#32FFFFFF"
-                android:backgroundTintMode="src_in"
-                android:textSize="20sp"
-                android:textColor="@color/colorPrimaryDark"
-                android:background="@color/colorPrimaryDark"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/jobId"
+                android:visibility="gone"/>
 
-            <LinearLayout
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                android:id="@+id/jobTitleViewJob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textSize="20dp"
+                android:text="titlePlaceholder"/>
+
+                <TextView
+                    android:onClick="doHideJobInfo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:text="X"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:background="@drawable/layout_xbutton"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="200dp"
+                <RelativeLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Titlu Job"/>
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/numeAngajatorViewJob"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="userP"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/numeAngajatorViewJob"
+                        android:layout_alignParentLeft="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_star_black_24dp"/>
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:id="@+id/ratingViewJob"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="rating"/>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="right"
-                    android:gravity="right">
+                    android:gravity="right"
+                    android:layout_alignParentRight="true">
 
                     <TextView
+                        android:id="@+id/startDateViewJob"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="De la: data"/>
+                        android:text="startDatePlaceholder"/>
                     <TextView
+                        android:id="@+id/endDateViewJob"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pana la: data"/>
+                        android:text="endDatePlaceholder"/>
+                    <TextView
+                        android:id="@+id/costViewJob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="costPlaceholder"/>
 
                 </LinearLayout>
 
-            </LinearLayout>
+            </RelativeLayout>
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="250dp">
                 <TextView
+                    android:id="@+id/descriptionViewJob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/descriere_job"/>
+                    android:text="descriptionPlaceholder"/>
             </androidx.core.widget.NestedScrollView>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
-                <Button
+                <ImageButton
+                    android:id="@+id/stergereJobButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_alignParentLeft="true"
-                    android:text="Aplica"
-                    android:textSize="15sp"
-                    style="@style/OutlineButtonStyle"/>
+                    android:src="@drawable/ic_delete_black_24dp"
+                    android:backgroundTint="#EF7777"/>
                 <Button
+                    android:id="@+id/contacteazaButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:textSize="15sp"
-                    android:text="Contacteaza"
-                    style="@style/OutlineButtonStyle"
+                    android:text="Contactează"
+                    android:backgroundTint="#7DCF76"
                     android:layout_alignParentRight="true"/>
             </RelativeLayout>
 
         </LinearLayout>
+
+        <include
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/add_job_layout_id"
+            layout="@layout/add_job_layout"
+            android:visibility="gone"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addJobButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_add_black_24dp"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/refreshJobsButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_refresh_black_24dp"
+            />
 
     </RelativeLayout>
 
@@ -141,6 +232,39 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:menu="@menu/main_menu"/>
+        app:menu="@menu/main_menu">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/logout">
+                <ListView
+                    android:id="@+id/mapsJobsListView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:divider="#000"
+                    android:dividerHeight="1dp"
+                    android:background="#E4E4E4"/>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentBottom="true"
+                app:backgroundTint="#ff0000"
+                android:text="Log out" />
+        </RelativeLayout>
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

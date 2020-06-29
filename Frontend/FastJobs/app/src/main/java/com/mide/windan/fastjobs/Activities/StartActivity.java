@@ -72,5 +72,7 @@ public class StartActivity extends AppCompatActivity {
 
     private void updateUI(GoogleSignInAccount account){
         Toast.makeText(this,account.getEmail(),Toast.LENGTH_LONG).show();
+        System.out.println("token: " + account.getIdToken());
+        account.getIdToken();
     }
 }

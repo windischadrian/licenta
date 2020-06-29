@@ -12,6 +12,7 @@ import java.util.Map;
 
 import static com.mide.windan.fastjobs.Enums.JobType.ANIMALE;
 import static com.mide.windan.fastjobs.Enums.JobType.ELECTRICIAN;
+import static com.mide.windan.fastjobs.Enums.JobType.LOC_DE_MUNCA;
 import static com.mide.windan.fastjobs.Enums.JobType.MASINA;
 import static com.mide.windan.fastjobs.Enums.JobType.TEHNIC;
 
@@ -49,6 +50,12 @@ public class DevTools {
         mo4.position(new LatLng(44.418104, 26.068438));
         jm4.setJobMarkerDetails(mo4, TEHNIC, job);
         jobMarkers.add(jm4);
+
+        JobMarker jm5 = new JobMarker();
+        MarkerOptions mo5 = new MarkerOptions();
+        mo5.position(new LatLng(44.428104, 26.068038));
+        jm5.setJobMarkerDetails(mo5, LOC_DE_MUNCA, job);
+        jobMarkers.add(jm5);
 
         return jobMarkers;
     }

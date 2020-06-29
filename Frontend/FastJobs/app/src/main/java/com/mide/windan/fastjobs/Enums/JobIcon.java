@@ -14,6 +14,7 @@ public class JobIcon {
         jobIcons.put(ELECTRICIAN, R.drawable.icon_marker_electrician);
         jobIcons.put(MASINA, R.drawable.icon_marker_masina);
         jobIcons.put(TEHNIC, R.drawable.icon_marker_tehnic);
+        jobIcons.put(LOC_DE_MUNCA, R.drawable.icon_marker_locdemunca);
     }
 
     public static Integer getJobIcon(JobType jobType){

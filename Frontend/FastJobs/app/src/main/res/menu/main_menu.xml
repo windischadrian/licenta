@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:title="@string/menu_home" />
+            android:title="Acasa" />
         <item
-            android:id="@+id/nav_gallery"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_profile"
+            android:title="Profil" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Filtre">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:title="Share" />
+                android:id="@+id/filtrareSpinner"
+                android:title=""
+                app:actionLayout="@layout/filtrare_spinner"/>
             <item
-                android:id="@+id/nav_send"
-                android:title="Send" />
+                android:id="@+id/filtrareCost"
+                android:title=""
+                app:actionLayout="@layout/filtrare_cost"/>
+            <item
+                android:id="@+id/filtrareDistanta"
+                android:title=""
+                app:actionLayout="@layout/filtrare_distanta"/>
         </menu>
     </item>
 </menu>
